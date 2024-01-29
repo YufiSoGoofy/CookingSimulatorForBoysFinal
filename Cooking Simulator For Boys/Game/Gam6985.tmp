@@ -1,0 +1,429 @@
+[gd_scene load_steps=29 format=3 uid="uid://b1aa6sc03st1"]
+
+[ext_resource type="Texture2D" uid="uid://csre2vn4f7gh8" path="res://Game/Game background.png" id="1_i1l74"]
+[ext_resource type="Script" path="res://Game/Game.gd" id="1_trrd3"]
+[ext_resource type="Script" path="res://Game/How to play.gd" id="2_lxksp"]
+[ext_resource type="FontFile" uid="uid://cdy5sk1cpbu1u" path="res://Main Menu/Anton-Regular.ttf" id="2_ww23d"]
+[ext_resource type="Texture2D" uid="uid://dcuj51cmohqw1" path="res://Game/Game items/Recipe book.png" id="5_rv3mc"]
+[ext_resource type="Texture2D" uid="uid://dxy1fm1b42pvm" path="res://Game/Game items/Cutting board.png" id="5_wgoy2"]
+[ext_resource type="Script" path="res://Game/Recipe book.gd" id="6_mxh4c"]
+[ext_resource type="Texture2D" uid="uid://d4gncp5jowumt" path="res://Game/Game items/Fridge.png" id="7_3qvm0"]
+[ext_resource type="Script" path="res://Game/Drawer.gd" id="7_qm3od"]
+[ext_resource type="Texture2D" uid="uid://c6og3sso7mr8d" path="res://Game/Game items/Stove.png" id="8_ltbxi"]
+[ext_resource type="Texture2D" uid="uid://b08l728ie8un1" path="res://Game/Game items/Game drawer.png" id="9_8rdnf"]
+[ext_resource type="Script" path="res://Game/Cupboard.gd" id="10_a1ifo"]
+[ext_resource type="Texture2D" uid="uid://dffjr6euqcpyb" path="res://Game/Game items/Game cupboard.png" id="10_hvnsr"]
+[ext_resource type="Texture2D" uid="uid://b2rt6jrorpqj0" path="res://Game/Game items/Oven.png" id="11_b4xv5"]
+[ext_resource type="Script" path="res://Game/Cabinet.gd" id="12_25r7g"]
+[ext_resource type="Texture2D" uid="uid://clkh3rg2d0rnd" path="res://Game/Game items/Game cabinet 1.png" id="12_uv6gi"]
+[ext_resource type="Texture2D" uid="uid://2o0lio63uvye" path="res://Game/Game items/Game cabinet 2.png" id="13_4e44r"]
+[ext_resource type="Script" path="res://Game/Cabinet 2.gd" id="13_h3aak"]
+[ext_resource type="Script" path="res://Game/Cabinet 3.gd" id="15_xw20g"]
+[ext_resource type="Script" path="res://Game/Pause.gd" id="19_mklba"]
+[ext_resource type="Texture2D" uid="uid://dhrmuwpjspleg" path="res://Game/Inventory/Inventory.png" id="21_kbdf7"]
+[ext_resource type="Texture2D" uid="uid://bnsdp6smj53li" path="res://Game/Inventory/Inventory pullup.png" id="22_3urwi"]
+
+[sub_resource type="Animation" id="Animation_cv0yx"]
+resource_name = "Popup"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_q56sw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wpu5v"]
+_data = {
+"Popup": SubResource("Animation_cv0yx"),
+"RESET": SubResource("Animation_q56sw")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ppgx3"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_804i0"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3uhkd"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="Node2D" type="Node2D"]
+rotation = 1.1973
+script = ExtResource("1_trrd3")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1148.0
+offset_bottom = 644.0
+rotation = -1.1973
+texture = ExtResource("1_i1l74")
+metadata/_edit_use_anchors_ = true
+
+[node name="Fridge" type="Button" parent="."]
+offset_left = 239.319
+offset_top = -298.24
+offset_right = 442.319
+offset_bottom = 164.76
+rotation = 5.08589
+icon = ExtResource("7_3qvm0")
+flat = true
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Stove" type="Button" parent="."]
+offset_left = 509.905
+offset_top = -605.207
+offset_right = 659.905
+offset_bottom = -512.207
+rotation = 5.08589
+icon = ExtResource("8_ltbxi")
+flat = true
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Cutting board" type="Button" parent="."]
+offset_left = 594.668
+offset_top = -813.079
+offset_right = 705.753
+offset_bottom = -725.469
+rotation = 5.08589
+icon = ExtResource("5_wgoy2")
+flat = true
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Drawer" type="Button" parent="."]
+offset_left = 532.0
+offset_top = -399.0
+offset_right = 696.0
+offset_bottom = -186.0
+rotation = 5.08589
+icon = ExtResource("9_8rdnf")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("7_qm3od")
+metadata/_edit_use_anchors_ = true
+
+[node name="Oven" type="Button" parent="."]
+offset_left = 590.434
+offset_top = -553.296
+offset_right = 783.434
+offset_bottom = -340.296
+rotation = 5.08589
+icon = ExtResource("11_b4xv5")
+flat = true
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Cupboard" type="Button" parent="."]
+offset_left = 667.0
+offset_top = -731.0
+offset_right = 882.0
+offset_bottom = -529.0
+rotation = 5.08589
+icon = ExtResource("10_hvnsr")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("10_a1ifo")
+metadata/_edit_use_anchors_ = true
+
+[node name="Cabinet" type="Button" parent="."]
+offset_left = 211.919
+offset_top = -535.449
+offset_right = 365.919
+offset_bottom = -407.449
+rotation = 5.08589
+icon = ExtResource("12_uv6gi")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("12_25r7g")
+metadata/_edit_use_anchors_ = true
+
+[node name="Cabinet 2" type="Button" parent="."]
+offset_left = 362.611
+offset_top = -919.975
+offset_right = 516.611
+offset_bottom = -791.975
+rotation = 5.08589
+icon = ExtResource("12_uv6gi")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("13_h3aak")
+metadata/_edit_use_anchors_ = true
+
+[node name="Cabinet 3" type="Button" parent="."]
+offset_left = 268.383
+offset_top = -682.101
+offset_right = 522.383
+offset_bottom = -552.101
+rotation = 5.08589
+icon = ExtResource("13_4e44r")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("15_xw20g")
+metadata/_edit_use_anchors_ = true
+
+[node name="Recipe book" type="Button" parent="."]
+offset_left = 461.967
+offset_top = -458.018
+offset_right = 562.967
+offset_bottom = -380.018
+rotation = 5.08589
+icon = ExtResource("5_rv3mc")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("6_mxh4c")
+metadata/_edit_use_anchors_ = true
+
+[node name="Recipe book instructions" type="Panel" parent="Recipe book"]
+visible = false
+layout_mode = 0
+offset_left = -555.329
+offset_top = -224.251
+offset_right = 517.91
+offset_bottom = 346.324
+pivot_offset = Vector2(500, 250)
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer1" type="AnimationPlayer" parent="Recipe book/Recipe book instructions"]
+libraries = {
+"": SubResource("AnimationLibrary_wpu5v")
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Recipe book/Recipe book instructions"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.012
+anchor_top = 0.044
+anchor_right = 0.947996
+anchor_bottom = 0.77
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_font_sizes/normal_font_size = 21
+text = "                                                                              Welcome to the recipe book!!!
+In this recipe book
+Here's a list of recipes that you can make:
+
+Burger
+To make a burger, you'll first need ingredients. These include:
+Buns
+Burger patty
+
+Pizza
+To make a burger, you'll first need ingredients. These include:
+
+Pasta
+To make a burger, you'll first need ingredients. These include:
+
+ingredients (that are scattered across the kitcken) 
+
+Click on the recipe book to choose a dish you want to cook.
+Hold right click on ingredients to select them.
+Drag it onto the chosen cooking equipment for the dish.
+Some recipes may require specific quantities or preparation steps.
+To find cooking cutlery, click the drawer and drag them to the chosen cooking equipment.
+Follow all the steps until the recipe is complete.
+Some steps may involve a specific order or timing.
+Certain dishes may also require cooking or baking time.
+Wait for the progress bar to complete before moving to the next step.
+Once done, your dish will be presented, and you can move on to the next order.
+You can even unlock new recipes as you progress.
+
+How to make a pizza?
+On the top of the screen, there are various user interface (UI) elements in game. These include:
+A levelling system used to display the player’s current level in the game. 
+A money counter to display money earned with each order.
+A timer is used for simulating how fast the player needs to cook in a real life setting like in a restaurant with hundreds of customers that actively want their meal to be finished cooking.
+A pause menu that allows the player to pause their game to change any additional settings like adjusting the window mode, turning up or down the volume of the music or even being able to view the instructions of the game.
+
+How to make a pasta?
+Pay attention to details in the recipe for the best results.
+Finishing dishes as quickly as possible also helps you gain money and experience points to level up. (EXP)
+The more you level up the more money you can get.
+Don't be afraid to get creative and add your own twists to the dishes.
+Experiment with different ingredients, toppings and combinations to discover unique flavours. 
+Create delicious dishes by dragging and dropping ingredients onto the cooking area. Follow recipes, experiment with flavours and become a master chef!!!"
+metadata/_edit_use_anchors_ = true
+
+[node name="Exit" type="Button" parent="Recipe book/Recipe book instructions"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.482998
+anchor_top = 0.88
+anchor_right = 0.532
+anchor_bottom = 0.97
+offset_right = -0.00231934
+offset_bottom = -3.05176e-05
+theme_override_colors/font_color = Color(0.964706, 0.811765, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.192157, 0.192157, 1)
+theme_override_colors/font_hover_color = Color(1, 0.192157, 0.192157, 1)
+theme_override_colors/font_focus_color = Color(1, 0.192157, 0.192157, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0.192157, 0.192157, 1)
+theme_override_fonts/font = ExtResource("2_ww23d")
+theme_override_font_sizes/font_size = 29
+theme_override_styles/normal = SubResource("StyleBoxFlat_ppgx3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_804i0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3uhkd")
+text = "Exit"
+metadata/_edit_use_anchors_ = true
+
+[node name="Pause" type="Button" parent="."]
+offset_left = 403.977
+offset_top = -995.212
+offset_right = 462.012
+offset_bottom = -925.212
+rotation = 5.08589
+theme_override_colors/font_color = Color(0.964706, 0.811765, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.192157, 0.192157, 1)
+theme_override_colors/font_hover_color = Color(1, 0.192157, 0.192157, 1)
+theme_override_colors/font_focus_color = Color(1, 0.192157, 0.192157, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0.192157, 0.192157, 1)
+theme_override_fonts/font = ExtResource("2_ww23d")
+theme_override_font_sizes/font_size = 40
+text = "I I"
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("19_mklba")
+metadata/_edit_use_anchors_ = true
+
+[node name="How to play" type="Panel" parent="Pause"]
+layout_mode = 0
+offset_left = -1034.33
+offset_top = 25.7509
+offset_right = 38.9109
+offset_bottom = 596.326
+pivot_offset = Vector2(500, 250)
+script = ExtResource("2_lxksp")
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Pause/How to play"]
+libraries = {
+"": SubResource("AnimationLibrary_wpu5v")
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Pause/How to play"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.012
+anchor_top = 0.044
+anchor_right = 0.947996
+anchor_bottom = 0.77
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_font_sizes/normal_font_size = 21
+text = "                                                                                               How to play
+Gameplay
+Click on today's orders to check what dishes you have to make for the day.
+Click on the recipe book to see what ingredients you'll need and how to make it.
+To find ingredients, click on certain objects to reveal where they could be potentially hidding.
+Once found, click on the upside down triangle shaped inventory button.
+Hold right click on ingredients to select them.
+Drag the selected ingredients onto the inventory.
+Drag it from the inventory onto the chosen cooking equipment.
+All recipes require ingredients to be in a specific order to prepare the dish.
+Follow all the steps until the recipe is complete.
+Some steps may involve a specific order or timing.
+Certain dishes may also require cooking or baking time.
+Once done, click on the finish button to move on to the next order.
+
+Game interface
+On the top of the screen, there are various user interface (UI) elements in game. These include:
+A levelling system used to display the player’s current level in the game. 
+A money counter to display money earned with each order.
+A timer is used for simulating how fast the player needs to cook in a real life setting like in a restaurant with hundreds of customers that actively want their meal to be finished cooking.
+A pause menu that allows the player to pause their game to change any additional settings like adjusting the window mode, turning off or on the volume of the music or even being able to view the instructions of the game.
+
+Tips & tricks
+Pay attention to details in the recipe for the best results.
+Finishing dishes as quickly as possible also helps you gain money and experience points to level up. (EXP)
+The more you level up the more money you can get.
+Don't be afraid to get creative and add your own twists to the dishes.
+Experiment with different ingredients, toppings and combinations to discover unique flavours. 
+Create delicious dishes by dragging and dropping ingredients onto the cooking area. Follow recipes, experiment with flavours and become a master chef!!!"
+metadata/_edit_use_anchors_ = true
+
+[node name="Exit" type="Button" parent="Pause/How to play"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.482998
+anchor_top = 0.88
+anchor_right = 0.532
+anchor_bottom = 0.97
+offset_right = -0.00231934
+offset_bottom = -3.05176e-05
+theme_override_colors/font_color = Color(0.964706, 0.811765, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.192157, 0.192157, 1)
+theme_override_colors/font_hover_color = Color(1, 0.192157, 0.192157, 1)
+theme_override_colors/font_focus_color = Color(1, 0.192157, 0.192157, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0.192157, 0.192157, 1)
+theme_override_fonts/font = ExtResource("2_ww23d")
+theme_override_font_sizes/font_size = 29
+theme_override_styles/normal = SubResource("StyleBoxFlat_ppgx3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_804i0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3uhkd")
+text = "Exit"
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 675.0
+offset_top = -867.0
+offset_right = 773.0
+offset_bottom = -807.0
+rotation = 5.08589
+size_flags_horizontal = 8
+size_flags_vertical = 8
+texture_normal = ExtResource("21_kbdf7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="TextureButton"]
+layout_mode = 2
+offset_left = -1054.0
+offset_top = 57.004
+offset_right = 98.0007
+offset_bottom = 336.004
+size_flags_vertical = 3
+texture = ExtResource("22_3urwi")
+
+[connection signal="pressed" from="Drawer" to="Drawer" method="_on_pressed"]
+[connection signal="pressed" from="Cupboard" to="Cupboard" method="_on_pressed"]
+[connection signal="pressed" from="Cabinet" to="Cabinet" method="_on_pressed"]
+[connection signal="pressed" from="Cabinet 2" to="Cabinet 2" method="_on_pressed"]
+[connection signal="pressed" from="Cabinet 3" to="Cabinet 3" method="_on_pressed"]
+[connection signal="pressed" from="Recipe book" to="Recipe book" method="_on_pressed"]
+[connection signal="pressed" from="Recipe book/Recipe book instructions/Exit" to="Recipe book" method="_on_exit_pressed"]
+[connection signal="pressed" from="Recipe book/Recipe book instructions/Exit" to="Recipe book/Recipe book instructions" method="_on_quit_pressed"]
+[connection signal="pressed" from="Pause" to="Pause" method="_on_pressed"]
+[connection signal="pressed" from="Pause/How to play/Exit" to="Pause" method="_on_exit_pressed"]
+[connection signal="pressed" from="Pause/How to play/Exit" to="Pause/How to play" method="_on_quit_pressed"]

@@ -1,0 +1,114 @@
+[gd_scene load_steps=6 format=3 uid="uid://byx0u471g0oeq"]
+
+[ext_resource type="Script" path="res://Main Menu/main_menu.gd" id="1_cmle1"]
+[ext_resource type="Texture2D" uid="uid://c7lni47ruui3v" path="res://Main Menu/Main Menu Background.png" id="2_ud28v"]
+[ext_resource type="FontFile" uid="uid://b378p33b7356s" path="res://Main Menu/MrDafoe-Regular.ttf" id="3_5g0ra"]
+[ext_resource type="FontFile" uid="uid://cdy5sk1cpbu1u" path="res://Main Menu/Anton-Regular.ttf" id="3_k5s5v"]
+[ext_resource type="AudioStream" uid="uid://3o6axwlv4faf" path="res://Main Menu/Main menu theme.mp3" id="5_euxbq"]
+
+[node name="Main menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 0
+script = ExtResource("1_cmle1")
+
+[node name="Main menu background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.025
+anchor_bottom = 0.025
+offset_right = 1151.0
+offset_bottom = 647.0
+texture = ExtResource("2_ud28v")
+expand_mode = 2
+
+[node name="Cooking" type="Label" parent="."]
+layout_mode = 2
+offset_left = 127.0
+offset_top = 28.977
+offset_right = 448.0
+offset_bottom = 199.977
+rotation = -0.0872665
+theme_override_colors/font_color = Color(0.964706, 0.811765, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_5g0ra")
+theme_override_font_sizes/font_size = 120
+text = "Cooking"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Simulator" type="Label" parent="."]
+layout_mode = 2
+offset_left = 53.0
+offset_top = 117.954
+offset_right = 533.0
+offset_bottom = 303.954
+rotation = -0.0436332
+theme_override_colors/font_color = Color(0.964706, 0.811765, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_5g0ra")
+theme_override_font_sizes/font_size = 130
+text = "Simulator"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="For boys" type="Label" parent="."]
+layout_mode = 0
+offset_left = 471.0
+offset_top = 237.0
+offset_right = 641.0
+offset_bottom = 316.0
+rotation = -0.15708
+theme_override_colors/font_color = Color(1, 0.192157, 0.192157, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_k5s5v")
+theme_override_font_sizes/font_size = 50
+text = "For Boys"
+
+[node name="Play button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 371.0
+offset_right = 190.0
+offset_bottom = 455.0
+theme_override_colors/font_color = Color(0.964706, 0.811765, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.192157, 0.192157, 1)
+theme_override_colors/font_hover_color = Color(1, 0.192157, 0.192157, 1)
+theme_override_colors/font_focus_color = Color(1, 0.192157, 0.192157, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0.192157, 0.192157, 1)
+theme_override_fonts/font = ExtResource("3_k5s5v")
+theme_override_font_sizes/font_size = 50
+text = "Play"
+expand_icon = true
+
+[node name="Quit button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 490.0
+offset_right = 190.0
+offset_bottom = 574.0
+theme_override_colors/font_color = Color(0.964706, 0.811765, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.192157, 0.192157, 1)
+theme_override_colors/font_hover_color = Color(1, 0.192157, 0.192157, 1)
+theme_override_colors/font_focus_color = Color(1, 0.192157, 0.192157, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0.192157, 0.192157, 1)
+theme_override_fonts/font = ExtResource("3_k5s5v")
+theme_override_font_sizes/font_size = 50
+text = "Quit"
+
+[node name="Version number" type="Label" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 622.0
+offset_right = 92.0
+offset_bottom = 648.0
+text = "V 1.0"
+
+[node name="Main menu theme" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_euxbq")
+autoplay = true
+
+[connection signal="pressed" from="Play button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Quit button" to="." method="_on_quit_button_pressed"]
