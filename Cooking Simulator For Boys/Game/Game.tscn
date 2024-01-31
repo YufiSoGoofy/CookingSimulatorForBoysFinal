@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://cjwdt6xvpo0a1"]
 
 [ext_resource type="Script" path="res://Game/Game.gd" id="1_trrd3"]
-[ext_resource type="Texture2D" uid="uid://b2sif4ci6fshd" path="res://Game/Game.png" id="2_6hrq0"]
+[ext_resource type="Texture2D" uid="uid://br564exj0j7br" path="res://Game/Game background.png" id="2_6hrq0"]
 [ext_resource type="Script" path="res://Game/How to play.gd" id="2_lxksp"]
 [ext_resource type="FontFile" uid="uid://cdy5sk1cpbu1u" path="res://Main Menu/Anton-Regular.ttf" id="2_ww23d"]
 [ext_resource type="Texture2D" uid="uid://xyrwncdkufc8" path="res://Game/Icon.png" id="4_2mcxm"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dxy1fm1b42pvm" path="res://Game/Game items/Cutting board.png" id="5_wgoy2"]
 [ext_resource type="Script" path="res://Game/Recipe book.gd" id="6_mxh4c"]
 [ext_resource type="Script" path="res://Game/Help.gd" id="19_mklba"]
+
 
 [sub_resource type="Animation" id="Animation_cv0yx"]
 resource_name = "Popup"

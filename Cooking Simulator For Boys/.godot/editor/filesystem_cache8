@@ -1,0 +1,30 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1706718147
+::res://Game/::1706716642
+Area2D.gd::GDScript::-1::1706713937::0::1::::<>Area2D<>::
+CharacterBody2D.gd::GDScript::-1::1706713937::0::1::::<>CharacterBody2D<>::
+Game background.png::CompressedTexture2D::3643496619027067371::1706713937::1706718235::1::::<><>::
+Game.gd::GDScript::-1::1706713937::0::1::::<>Node2D<>::
+Game.tscn::PackedScene::5450175016509425214::1706713937::0::1::::<><>::res://Game/Game.gd<>uid://b2sif4ci6fshd::::res://Game/Game.png<>res://Game/How to play.gd<>uid://cdy5sk1cpbu1u::::res://Main Menu/Anton-Regular.ttf<>uid://xyrwncdkufc8::::res://Game/Icon.png<>res://Game/CharacterBody2D.gd<>res://Game/Area2D.gd<>uid://dcuj51cmohqw1::::res://Game/Game items/Recipe book.png<>uid://dxy1fm1b42pvm::::res://Game/Game items/Cutting board.png<>res://Game/Recipe book.gd<>res://Game/Help.gd
+Help.gd::GDScript::-1::1706713937::0::1::::<>Button<>::
+How to play.gd::GDScript::-1::1706713937::0::1::::<>Panel<>::
+Icon.png::CompressedTexture2D::1664960632158739353::1706713937::1706718235::1::::<><>::
+Recipe book.gd::GDScript::-1::1706713937::0::1::::<>Button<>::
+TextureButton.gd::GDScript::-1::1706713937::0::1::::<>TextureButton<>::
+::res://Game/Game items/::1706716642
+Cutting board.png::CompressedTexture2D::8824738762163320154::1706713937::1706718235::1::::<><>::
+Recipe book.png::CompressedTexture2D::7341528689449549278::1706713937::1706718235::1::::<><>::
+::res://Intro credits/::1706716642
+Intro.gd::GDScript::-1::1706713937::0::1::::<>Node2D<>::
+Intro.png::CompressedTexture2D::921005155807240076::1706713937::1706718235::1::::<><>::
+Intro.tscn::PackedScene::4444591130066681037::1706713937::0::1::::<><>::res://Intro credits/Intro.gd<>uid://nee25liy44hc::::res://Intro credits/Intro.png
+::res://Loading/::1706713937
+Label.gd::GDScript::-1::1706713937::0::1::::<>Label<>::
+Loading.tscn::PackedScene::7108709300440490920::1706713937::0::1::::<><>::uid://b378p33b7356s::::res://Main Menu/MrDafoe-Regular.ttf<>res://Loading/Label.gd
+::res://Main Menu/::1706716642
+Anton-Regular.ttf::FontFile::5034807183980411408::1706713937::1706718233::1::::<><>::
+Main Menu Background.png::CompressedTexture2D::7042397699765919853::1706713937::1706718235::1::::<><>::
+Main menu theme.mp3::AudioStreamMP3::1996072379749252785::1706713938::1706718234::1::::<><>::
+main_menu.gd::GDScript::-1::1706713938::0::1::::<>Control<>::
+main_menu.tscn::PackedScene::4119988833847746104::1706713938::0::1::::<><>::res://Main Menu/main_menu.gd<>uid://c7lni47ruui3v::::res://Main Menu/Main Menu Background.png<>uid://b378p33b7356s::::res://Main Menu/MrDafoe-Regular.ttf<>uid://cdy5sk1cpbu1u::::res://Main Menu/Anton-Regular.ttf<>uid://3o6axwlv4faf::::res://Main Menu/Main menu theme.mp3
+MrDafoe-Regular.ttf::FontFile::4419800355355449512::1706713938::1706718233::1::::<><>::
